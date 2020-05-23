@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
-import Acceuil from './Acceuil'
-import inscription_etudiant from "./inscription_etudiant";
-import inscription_mentor from "./inscription_mentor";
+import Acceuil from './Components/Route/Acceuil'
+import inscription_etudiant from "./Components/Route/inscription_etudiant";
+import inscription_mentor from "./Components/Route/inscription_mentor";
 
 
 function App() {
