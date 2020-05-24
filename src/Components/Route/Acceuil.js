@@ -8,6 +8,7 @@ function Acceuil(){
             <ul>
                 {to_inscr_mentor()}
                 {to_acceuil()}
+                {to_inscr_etud()}
             </ul>
         </div>
 
