@@ -1,4 +1,5 @@
 import React from 'react';
+import {to_acceuil, to_inscr_etud} from "../NavItems";
 
 function inscription_mentor(){
     return(
@@ -7,6 +8,10 @@ function inscription_mentor(){
             <IdForm />
             <ChoisirCours />
             <input type="submit" value="Envoyer"/>
+            <ul>
+                {to_acceuil()}
+                {to_inscr_etud()}
+            </ul>
         </div>
     );
 }

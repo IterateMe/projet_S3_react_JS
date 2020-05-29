@@ -1,5 +1,5 @@
 import React from 'react';
-import {to_acceuil, to_inscr_mentor, to_inscr_etud} from '../NavItems'
+import {to_inscr_mentor, to_inscr_etud} from '../NavItems'
 
 function Acceuil(){
     return(
@@ -7,7 +7,6 @@ function Acceuil(){
             <h1>ACCEUIL</h1>
             <ul>
                 {to_inscr_mentor()}
-                {to_acceuil()}
                 {to_inscr_etud()}
             </ul>
         </div>

@@ -1,14 +1,13 @@
 import React from 'react';
-import {to_acceuil, to_inscr_etud, to_inscr_mentor} from "../NavItems";
+import {to_acceuil, to_inscr_mentor} from "../NavItems";
 
 function inscription_etudiant(){
     return(
         <div>
             <h1>TROUVER UN MENTOR</h1>
             <ul>
-                {to_inscr_mentor()}
                 {to_acceuil()}
-                {to_inscr_etud()}
+                {to_inscr_mentor()}
             </ul>
             <MentorSelect />
             <CourSelect />
