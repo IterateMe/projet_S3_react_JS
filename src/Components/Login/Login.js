@@ -1,6 +1,5 @@
 import React from 'react';
 import './Login.css';
-import {goToSignUp} from '../NavItems.js';
 
 
 class Login extends React.Component{

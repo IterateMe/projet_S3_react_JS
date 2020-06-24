@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from'../../Components/Login/Login.js';
 import {goToSignUp} from '../../Components/NavItems.js';
+import {goToMainMenu} from '../../Components/NavItems.js';
 
 class SignInPage extends React.Component{
     constructor(props){
@@ -27,6 +28,8 @@ class SignInPage extends React.Component{
     handleSignIn(){
         console.log(this.state.username);
         console.log(this.state.password);
+        goToMainMenu();
+
     }
 
     handleSignUp(){

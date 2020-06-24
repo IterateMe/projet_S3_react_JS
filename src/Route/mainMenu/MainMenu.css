@@ -1,0 +1,32 @@
+.Main-Menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    padding: 2.27rem 1.16rem;
+    background-color: #ffff;
+    border: 2px solid #000000;
+    margin-top: 2rem;
+}
+
+.Menu-Button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 8.11rem;
+    padding: .77rem 0;
+    border-radius: 54px;
+    background-color: #009E00;
+    text-align: center;
+    font-size: .833rem;
+    transition: background-color .25s;
+    border: 0px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.Menu-Button:hover{
+    background-color: #006D00;
+}
