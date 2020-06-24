@@ -1,6 +1,7 @@
 import React from 'react';
 import {goToInscriptionMentor, goToInscriptionEtudiant} from '../NavItems'
 
+
 class Acceuil extends React.Component{
     render(){
         return(
