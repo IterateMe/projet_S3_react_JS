@@ -1,9 +1,6 @@
 import React from 'react';
 import SignInPage from '../SignInPage/SignInPage.js';
 
-import './Acceuil.css';
-
-
 class Acceuil extends React.Component{
     render(){
         return(
