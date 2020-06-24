@@ -9,6 +9,21 @@ function to_acceuil(){
     );
 }
 
+function goToInscriptionEtudiant(){
+    let currentPath = window.location.href;
+    let goToPath = currentPath+"inscription-etudiant";
+    window.location.assign(goToPath);
+    console.log(goToPath);
+}
+
+function goToInscriptionMentor(){
+    let currentPath = window.location.href;
+    let goToPath = currentPath+"inscription-mentor";
+    window.location.assign(goToPath);
+    console.log(goToPath);
+}
+
+
 function to_inscr_etud(){
     return(
         <li>
@@ -28,3 +43,5 @@ function to_inscr_mentor(){
 export {to_acceuil};
 export {to_inscr_etud};
 export {to_inscr_mentor};
+export {goToInscriptionEtudiant};
+export {goToInscriptionMentor};

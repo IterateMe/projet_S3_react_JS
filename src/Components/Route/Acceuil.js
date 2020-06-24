@@ -1,5 +1,5 @@
 import React from 'react';
-import {to_inscr_mentor, to_inscr_etud} from '../NavItems'
+import {goToInscriptionMentor, goToInscriptionEtudiant} from '../NavItems'
 
 class Acceuil extends React.Component{
     render(){
@@ -7,8 +7,8 @@ class Acceuil extends React.Component{
             <div>
                 <h1>ACCEUIL</h1>
                 <ul>
-                    {to_inscr_mentor()}
-                    {to_inscr_etud()}
+                    <button onClick={goToInscriptionMentor}>Incription Mentor</button><br/>
+                    <button onClick={goToInscriptionEtudiant}>Incription Etudiant</button>
                 </ul>
             </div>    
         );
