@@ -1,7 +1,6 @@
 import React from 'react';
 import SignUp from '../../Components/SignUp/SignUp.js';
-
-import './SignUpPage.css';
+import {goToSignIn} from '../../Components/NavItems.js';
 
 class SignUpPage extends React.Component{
   constructor(props){
@@ -37,8 +36,11 @@ class SignUpPage extends React.Component{
       console.log(this.state.confirmedPassword);
     } else {
       console.log('Invalid Credentials.');
-    }
-    
+    }  
+  }
+
+  handleBackButton(){
+    goToSignIn();
   }
 
   render(){
@@ -47,7 +49,8 @@ class SignUpPage extends React.Component{
         <SignUp onUsernameChange={this.handleUsernameChange} 
                 onPasswordChange={this.handlePasswordChange} 
                 onConfirmPasswordChange={this.handleConfirmedPasswordChange} 
-                onSignUp={this.handleSignUp}/>
+                onSignUp={this.handleSignUp}
+                onBack={this.handleBackButton}/>
       </div>
     );
   }

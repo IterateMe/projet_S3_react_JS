@@ -36,6 +36,7 @@ class SignUp extends React.Component{
                         <label>Confirm password:</label><br/>
                         <input type="password" onChange={this.handleConfirmedPasswordChange}/><br/>
                         <button type="button" className="signUpButton" onClick={this.props.onSignUp}>Sign Up</button>
+                        <button type="button" className="signUpButton" onClick={this.props.onBack}>Back</button>
                     </form>   
                 </div>
             </div>
