@@ -1,0 +1,43 @@
+body,
+html,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+.App-Header{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #006D00;
+  height: 150px;
+}
+
+.HeaderImage{
+  height: 100px;
+  width: 500px;
+}
+
+.App-Main {
+  height: 500px;
+  padding: 0 17% 10% 17%;
+  background-image: url('campus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .App-main {
+    align-items: center;
+    flex-direction: column;
+  }
+}

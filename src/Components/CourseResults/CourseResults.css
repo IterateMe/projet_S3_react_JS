@@ -1,0 +1,21 @@
+.courseResults {
+  overflow-y: scroll;
+  width: 200px;
+  height: 300px;
+  padding: 2.27rem 1.16rem;
+  background-color: #ffff;
+  border: 2px solid #000000;
+  margin: 0.1rem;
+}
+  
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+  }
+  
+  @media only screen and (max-width: 1020px) {
+    .SearchResults {
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }

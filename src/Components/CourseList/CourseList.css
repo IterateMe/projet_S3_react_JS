@@ -1,0 +1,9 @@
+.CourseList {
+    width: 100%;
+  }
+
+.CourseList ul{
+  list-style-type: none;
+  align-items: left;
+  justify-content: left;
+}
