@@ -1,5 +1,4 @@
 import React from 'react';
-import {goToInscriptionMentor, goToInscriptionEtudiant} from '../../Components/NavItems';
 import SignInPage from '../SignInPage/SignInPage.js';
 
 import './Acceuil.css';

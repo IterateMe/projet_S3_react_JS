@@ -6,10 +6,6 @@ import {goToSignUp} from '../NavItems.js';
 class Login extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            username: '',
-            password: '',
-        }
 
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -18,20 +14,19 @@ class Login extends React.Component{
     }
     
     handleUsernameChange(event){
-        this.setState({username: event.target.value});
+        this.props.onUsernameChange(event.target.value);
     }
 
     handlePasswordChange(event){
-        this.setState({password: event.target.value});
+        this.props.onPasswordChange(event.target.value);
     }
     
     handleSubmitSignIn(){
-        console.log(this.state.username);
-        console.log(this.state.password);
+        this.props.onSignIn();
     }
 
     handleSubmitSignUp(){
-        goToSignUp();
+        this.props.onSignUp();
     }
 
     render(){
