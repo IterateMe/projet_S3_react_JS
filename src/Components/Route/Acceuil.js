@@ -10,7 +10,6 @@ function Acceuil(){
                 {to_inscr_etud()}
             </ul>
         </div>
-
     );
 }
 

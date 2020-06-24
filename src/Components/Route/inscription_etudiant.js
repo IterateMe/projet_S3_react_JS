@@ -9,10 +9,12 @@ function inscription_etudiant(){
                 {to_acceuil()}
                 {to_inscr_mentor()}
             </ul>
-            <MentorSelect />
-            <CourSelect />
-            <ProgSelect />
-            <input type="submit" value="Envoyer"/>
+            <form action="/inscription_etudiant" method="post">
+                <div><MentorSelect /></div>
+                <div><CourSelect /></div>
+                <div><ProgSelect /></div>
+                    <input type="submit" value="Envoyer"/>
+            </form>
         </div>
     );
 }
@@ -29,13 +31,11 @@ class MentorSelect extends React.Component {
 
     render() {
         return (
-            <form>
                 <select value={this.state.val} onChange={this.handleChange}>
                     <option value="Mentor 1">Mentor 1</option>
                     <option value="Mentor 2">Mentor 2</option>
                     <option value="Mentor 3">Mentor 3</option>
                 </select>
-            </form>
         );
     }
 }
@@ -52,13 +52,13 @@ class ProgSelect extends React.Component {
 
     render() {
         return (
-            <form>
+
                 <select value={this.state.val} onChange={this.handleChange}>
                     <option value="GI">GI</option>
                     <option value="GE">GE</option>
                     <option value="GRO">'G'RO</option>
                 </select>
-            </form>
+
         );
     }
 }
@@ -75,13 +75,13 @@ class CourSelect extends React.Component {
 
     render() {
         return (
-            <form>
+
                 <select value={this.state.val} onChange={this.handleChange}>
                     <option value="GEN280">GEN280</option>
                     <option value="GEN400">GEN400</option>
                     <option value="Cours su 'es ACV">Cours su 'es ACV</option>
                 </select>
-            </form>
+
         );
     }
 }

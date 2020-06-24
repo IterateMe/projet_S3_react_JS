@@ -5,9 +5,11 @@ function inscription_mentor(){
     return(
         <div>
             <h1>INSCRIPTION-MENTOR</h1>
-            <IdForm />
-            <ChoisirCours />
-            <input type="submit" value="Envoyer"/>
+            <form action="/inscription_mentor" method="post">
+                <div><IdForm /></div>
+                <div><ChoisirCours /></div>
+                <div><input type="submit" value="Envoyer"/></div>
+            </form>
             <ul>
                 {to_acceuil()}
                 {to_inscr_etud()}
@@ -33,14 +35,14 @@ class IdForm extends React.Component {
 
     render() {
         return (
-            <form>
+            <div>
                 <p>Nom:</p>
                 <input type='text' onChange={this.myChangeHandler} autoComplete='on' name='nom'/>
                 <p>Prenom:</p>
                 <input type='text' onChange={this.myChangeHandler} autoComplete='on' name='prenom'/>
                 <p>E-mail:</p>
                 <input type='email' onChange={this.myChangeHandler} autoComplete='on' name='email'/>
-            </form>
+            </div>
         );
     }
 }
@@ -62,11 +64,11 @@ class ChoisirCours extends React.Component {
 
     render() {
         return (
-            <form>
+            <div>
                 <div><label><input type='checkbox' onChange={this.myChangeHandler}  name='GEN280' />GEN280</label></div>
                 <div><label><input type='checkbox' onChange={this.myChangeHandler}  name='GEN400' />GEN400</label></div>
                 <div><label><input type='checkbox' onChange={this.myChangeHandler}  name='GENAVC' />GENAVC</label></div>
-            </form>
+            </div>
         );
     }
 }
