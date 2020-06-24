@@ -1,22 +1,44 @@
 import React from 'react';
 import {to_acceuil, to_inscr_mentor} from "../NavItems";
 
-function inscription_etudiant(){
-    return(
-        <div>
-            <h1>TROUVER UN MENTOR</h1>
-            <ul>
-                {to_acceuil()}
-                {to_inscr_mentor()}
-            </ul>
-            <form action="/inscription_etudiant" method="post">
-                <div><MentorSelect /></div>
-                <div><CourSelect /></div>
-                <div><ProgSelect /></div>
-                    <input type="submit" value="Envoyer"/>
-            </form>
-        </div>
-    );
+
+class InscriptionEtudiant extends React.Component{
+    constructor(props){
+        super(props);
+        this.state= {
+            mentor: "",
+            cours: "",
+            prog: ""
+        };
+    }
+
+    setMentor(e){
+        this.setState({mentor: e.target.value})
+    }
+
+    setCours(e){
+        this.setState({cours: e.target.value})
+    }
+
+    setProg(e){
+        this.setState({prog: e.target.value})
+    }
+
+    render(){
+        return(
+            <div>
+                <h1>TROUVER UN MENTOR</h1>
+                <ul>
+                    {to_acceuil()}
+                    {to_inscr_mentor()}
+                </ul>
+                <MentorSelect onChange={this.setMentor()}/>
+                <CourSelect />
+                <ProgSelect />
+                <input type="submit" value="Envoyer"/>
+            </div>
+        );
+    }
 }
 
 class MentorSelect extends React.Component {
@@ -26,7 +48,7 @@ class MentorSelect extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({val: event.target.value})
+        this.setState({val: event.target.value});
     };
 
     render() {
@@ -86,4 +108,6 @@ class CourSelect extends React.Component {
     }
 }
 
-export default inscription_etudiant;
+
+export default InscriptionEtudiant;
+

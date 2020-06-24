@@ -2,18 +2,25 @@ import React from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import Acceuil from './Components/Route/Acceuil'
-import inscription_etudiant from "./Components/Route/inscription_etudiant";
 import inscription_mentor from "./Components/Route/inscription_mentor";
+import InscriptionEtudiant from './Components/Route/inscription_etudiant';
 
 
-function App() {
-  return (
-    <div className="App">
-        <Route exact path="/" component={Acceuil}/>
-        <Route exact path="/inscription-etudiant" component={inscription_etudiant}/>
-        <Route exact path="/inscription-mentor" component={inscription_mentor}/>
-    </div>
-  );
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+  
+  render(){
+    return (
+      <div className="App">
+          <Route exact path="/" component={Acceuil}/>
+          <Route exact path="/inscription-etudiant" component={InscriptionEtudiant}/>
+          <Route exact path="/inscription-mentor" component={inscription_mentor}/>
+      </div>
+    );
+  }
 }
 
-export {App};
+export default App;
