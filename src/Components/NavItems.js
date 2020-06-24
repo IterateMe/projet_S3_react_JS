@@ -18,6 +18,16 @@ function goToSignIn(){
     window.location.assign(goToPath);
 }
 
+function goToMainMenu(){
+    let goToPath = "/main-menu";
+    window.location.assign(goToPath);
+}
+
+function goToMentorSignUp(){
+    let goToPath = "/mentor-signup";
+    window.location.assign(goToPath);
+}
+
 function to_inscr_etud(){
     return(
         <li>
@@ -39,3 +49,5 @@ export {to_inscr_etud};
 export {to_inscr_mentor};
 export {goToSignUp};
 export {goToSignIn};
+export {goToMainMenu};
+export {goToMentorSignUp};
