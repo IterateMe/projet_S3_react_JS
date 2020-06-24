@@ -1,20 +1,27 @@
 import React from 'react';
 import {to_acceuil, to_inscr_mentor} from "../NavItems";
 
-function inscription_etudiant(){
-    return(
-        <div>
-            <h1>TROUVER UN MENTOR</h1>
-            <ul>
-                {to_acceuil()}
-                {to_inscr_mentor()}
-            </ul>
-            <MentorSelect />
-            <CourSelect />
-            <ProgSelect />
-            <input type="submit" value="Envoyer"/>
-        </div>
-    );
+class InscriptionEtudiant extends React.Component{
+    constructor(props){
+        super(props);
+        this.state= {};
+    }
+
+    render(){
+        return(
+            <div>
+                <h1>TROUVER UN MENTOR</h1>
+                <ul>
+                    {to_acceuil()}
+                    {to_inscr_mentor()}
+                </ul>
+                <MentorSelect />
+                <CourSelect />
+                <ProgSelect />
+                <input type="submit" value="Envoyer"/>
+            </div>
+        );
+    }
 }
 
 class MentorSelect extends React.Component {
@@ -24,7 +31,7 @@ class MentorSelect extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({val: event.target.value})
+        this.setState({val: event.target.value});
     };
 
     render() {
@@ -86,4 +93,4 @@ class CourSelect extends React.Component {
     }
 }
 
-export default inscription_etudiant;
+export default InscriptionEtudiant;
