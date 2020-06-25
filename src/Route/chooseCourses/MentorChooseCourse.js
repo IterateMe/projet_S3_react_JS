@@ -2,7 +2,7 @@ import React from 'react';
 import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
 
-class MentorSignUp extends React.Component{
+class MentorChooseCourse extends React.Component{
     constructor(props){
         super(props);
 
@@ -66,4 +66,4 @@ class MentorSignUp extends React.Component{
     }
 }
 
-export default MentorSignUp;
+export default MentorChooseCourse;
