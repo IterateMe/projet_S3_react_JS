@@ -14,6 +14,7 @@ class MentorSignUp extends React.Component{
         this.handleRemove = this.handleRemove.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
         this.search =this.search.bind(this);
+        this.confirmCourses = this.confirmCourses.bind(this);
 
         this.search();
     }
@@ -47,13 +48,19 @@ class MentorSignUp extends React.Component{
         Zeus.search().then(results => this.setState({availableCourses: results}));
     }
 
+    confirmCourses(){
+        /*Send a POST request here*/
+        /*SelectedCourses get sent*/
+    }
+
     render(){
         return(
             <div className="Mentor-SignUp">
                 <CourseResults selectedCourses={this.state.selectedCourses} 
                     availableCourses={this.state.availableCourses} 
                     onAdd={this.handleAdd} 
-                    onRemove={this.handleRemove}/>
+                    onRemove={this.handleRemove}
+                    onConfirm={this.confirmCourses}/>
             </div>
         )
     }

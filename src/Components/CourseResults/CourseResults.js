@@ -18,7 +18,7 @@ class CourseResults extends React.Component{
                         onAdd={this.props.onAdd} 
                         onRemove={this.props.onRemove}/>
                 </div>
-                <button className="confirm-button">Confirm</button><br/>
+                <button onClick={this.props.onConfirm} className="confirm-button">Confirm</button><br/>
                 <button className="confirm-button">Back</button>             
             </div>
         );
