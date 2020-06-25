@@ -17,7 +17,9 @@ class CourseResults extends React.Component{
                     <CourseList courseList = {this.props.availableCourses} isRemovable={false} 
                         onAdd={this.props.onAdd} 
                         onRemove={this.props.onRemove}/>
-                </div>             
+                </div>
+                <button className="confirm-button">Confirm</button><br/>
+                <button className="confirm-button">Back</button>             
             </div>
         );
     }
