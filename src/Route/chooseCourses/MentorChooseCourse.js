@@ -5,10 +5,11 @@ import Zeus from '../../util/Zeus.js';
 class MentorChooseCourse extends React.Component{
     constructor(props){
         super(props);
-
+        this.endPoint = "/chooseCourse";
         this.state={
             availableCourses: [],
-            selectedCourses: []
+            selectedCourses: [],
+            role: "mentor"
         };
 
         this.handleRemove = this.handleRemove.bind(this);
@@ -51,6 +52,9 @@ class MentorChooseCourse extends React.Component{
     confirmCourses(){
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
+        // eslint-disable-next-line no-undef
+        const response = postRequest.send(this.state, this.endPoint);
+        console.log(response)
     }
 
     render(){
