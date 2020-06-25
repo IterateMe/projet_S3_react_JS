@@ -8,6 +8,7 @@ import logo from './logoEtNom.jpg'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
 import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
 import MentorChooseCourse from '../../Route/chooseCourses/MentorChooseCourse';
+import StudentChooseCourse from '../../Route/chooseCourses/StudentChooseCourse';
 
 
 class App extends React.Component{
@@ -29,6 +30,7 @@ class App extends React.Component{
           <Route exact path="/inscription" component={SignUpPage}/>
           <Route exact path="/main-menu" component={MainMenu}/>
           <Route exact path="/mentor-signup" component={MentorChooseCourse}/>
+          <Route exact path="/student-signup" component={StudentChooseCourse}/>
         </div>          
       </div>
     );

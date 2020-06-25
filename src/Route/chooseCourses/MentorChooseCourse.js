@@ -10,14 +10,14 @@ class MentorChooseCourse extends React.Component{
             availableCourses: [],
             selectedCourses: [],
             role: "mentor"
+
         };
 
         this.handleRemove = this.handleRemove.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
         this.search =this.search.bind(this);
+        this.handleTermChange = this.handleTermChange.bind(this);
         this.confirmCourses = this.confirmCourses.bind(this);
-
-        this.search();
     }
 
     handleRemove(courseToRemove){
@@ -45,8 +45,13 @@ class MentorChooseCourse extends React.Component{
         }
     }
 
+    handleTermChange(term){
+        this.setState({searchTerm: term});
+    }
+
     search(){
-        Zeus.search().then(results => this.setState({availableCourses: results}));
+        console.log(this.state.searchTerm);
+        Zeus.search(this.state.searchTerm).then(results => this.setState({availableCourses: results}));
     }
 
     confirmCourses(){
@@ -64,7 +69,9 @@ class MentorChooseCourse extends React.Component{
                     availableCourses={this.state.availableCourses} 
                     onAdd={this.handleAdd} 
                     onRemove={this.handleRemove}
-                    onConfirm={this.confirmCourses}/>
+                    onConfirm={this.confirmCourses}
+                    onTermChange={this.handleTermChange}
+                    onSearch={this.search}/>
             </div>
         )
     }

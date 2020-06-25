@@ -21,7 +21,7 @@ class Course extends React.Component{
             <div className="course">
                 <div className="course-information">
                     <h3>{this.props.course.name}</h3>
-                    <p>{this.props.course.artist} | {this.props.course.album}</p>
+                    <p>{this.props.course.credits} | {this.props.course.description}</p>
                 </div>
                 <button className="course-action"
                         onClick={this.props.isRemovable? this.removeCourse: this.addCourse}>
