@@ -5,6 +5,15 @@ const postRequest = {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
-            }).then( response => response.json())
+            })
+            .then(function(response) {
+                if(response.ok) {
+                    return response.json();
+                }
+            })
+            .then(responseJson => {
+                console.log(responseJson.status);
+                alert(responseJson.status)
+            })
     }
 }
