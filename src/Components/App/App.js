@@ -25,8 +25,6 @@ class App extends React.Component{
         </div>
         <div className="App-Main">
           <Route exact path="/" component={Acceuil}/>
-          {/*<Route exact path="/inscription-etudiant" component={InscriptionEtudiant}/>*/}
-          {/*<Route exact path="/inscription-mentor" component={inscription_mentor}/>*/}
           <Route exact path="/inscription" component={SignUpPage}/>
           <Route exact path="/main-menu" component={MainMenu}/>
           <Route exact path="/mentor-signup" component={MentorChooseCourse}/>
