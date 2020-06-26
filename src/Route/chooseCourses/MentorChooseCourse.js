@@ -1,7 +1,7 @@
 import React from 'react';
 import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
-import postRequest from '../../util/postRequestToAPI.js'
+import TutoApp from '../../util/TutoApp';
 
 class MentorChooseCourse extends React.Component{
     constructor(props){
@@ -58,12 +58,7 @@ class MentorChooseCourse extends React.Component{
     confirmCourses(){
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
-        /*const response = postRequest.send(this.state, this.endPoint);*/
-        const response = postRequest.send({
-            title: "Pew pew pew",
-            body: "not now I have a headache",
-            userId: 2
-        }, 'https://jsonplaceholder.typicode.com/posts');
+        const response = TutoApp.send(this.state, this.endPoint);
         console.log(response)
     }
 

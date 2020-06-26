@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
+import TutoApp from '../../util/TutoApp';
 
 class StudentChooseCourse extends React.Component{
     constructor(props){
@@ -53,7 +54,7 @@ class StudentChooseCourse extends React.Component{
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
         // eslint-disable-next-line no-undef
-        const response = postRequest.send(this.state, this.endPoint);
+        const response = TutoApp.send(this.state, this.endPoint);
         console.log(response)
     }
 
