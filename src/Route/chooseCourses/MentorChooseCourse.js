@@ -58,7 +58,21 @@ class MentorChooseCourse extends React.Component{
     confirmCourses(){
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
-        const response = TutoApp.send(this.state, this.endPoint);
+        /*
+        const dataToSend = {
+            role: this.state.role,
+            selectedCourses: this.state.selectedCourses,
+            cip: this.state.cip
+        }
+        const response = TutoApp.send(dataToSend, this.endPoint);
+        */
+
+       const dataToSend = {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+        }
+        const response = TutoApp.send(dataToSend, 'https://jsonplaceholder.typicode.com/posts');
         console.log(response)
     }
 
