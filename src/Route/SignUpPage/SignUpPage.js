@@ -31,7 +31,7 @@ class SignUpPage extends React.Component{
 
   handleSignUp(){
     if (this.state.password === this.state.confirmedPassword){
-      this.props.cipLogin = this.state.username;
+      this.props.cipLogin(this.state.username);
       console.log(this.state.username);
       console.log(this.state.password);
       console.log(this.state.confirmedPassword);
