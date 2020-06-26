@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import TutoApp from '../../util/TutoApp.js';
 
 
 class Login extends React.Component{
@@ -21,7 +22,9 @@ class Login extends React.Component{
     }
     
     handleSubmitSignIn(){
-        this.props.onSignIn();
+        /*test une requete sur le backend*/
+        TutoApp.getStudent();
+        //this.props.onSignIn();
     }
 
     handleSubmitSignUp(){
