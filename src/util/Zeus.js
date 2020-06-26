@@ -1,5 +1,5 @@
 const Zeus = {
-    search(term){
+    search(term, cip){
         return fetch(`http://localhost:8080/tutoratApp/api/makeZeusRequest?url=http://zeus.gel.usherbrooke.ca:8080/ms/rest/groupe_cours?inscription=2017-01-01&trimestre_id=${term}&departement_id=1808`)
             .then((response)=>{
                     if(response.ok){

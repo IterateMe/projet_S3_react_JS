@@ -3,7 +3,6 @@ import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
 
 class StudentChooseCourse extends React.Component{
-    static nom = "";
     constructor(props){
         super(props);
         this.endPoint = "/chooseCourse";

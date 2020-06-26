@@ -10,8 +10,8 @@ class MentorChooseCourse extends React.Component{
         this.state={
             availableCourses: [],
             selectedCourses: [],
-            role: "mentor"
-
+            role: "mentor",
+            cip: this.props.cipLogin
         };
 
         this.handleRemove = this.handleRemove.bind(this);
@@ -52,13 +52,18 @@ class MentorChooseCourse extends React.Component{
 
     search(){
         console.log(this.state.searchTerm);
-        Zeus.search(this.state.searchTerm).then(results => this.setState({availableCourses: results}));
+        Zeus.search(this.state.searchTerm, this.state.cip).then(results => this.setState({availableCourses: results}));
     }
 
     confirmCourses(){
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
-        const response = postRequest.send(this.state, this.endPoint);
+        /*const response = postRequest.send(this.state, this.endPoint);*/
+        const response = postRequest.send({
+            title: "Pew pew pew",
+            body: "not now I have a headache",
+            userId: 2
+        }, 'https://jsonplaceholder.typicode.com/posts');
         console.log(response)
     }
 

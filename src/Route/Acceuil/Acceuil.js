@@ -6,7 +6,7 @@ class Acceuil extends React.Component{
         return(
             <div className="Acceuil">
                 <div className="Acceuil-Main">
-                    <SignInPage/>
+                    <SignInPage cipLogin={this.props.cipLogin} />
                 </div>  
             </div>
         );
