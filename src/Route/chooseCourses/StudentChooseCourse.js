@@ -3,22 +3,24 @@ import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
 import TutoApp from '../../util/TutoApp';
 
-class StudentChooseCourse extends React.Component{
+class ChooseCourse extends React.Component{
     constructor(props){
         super(props);
         this.endPoint = "/chooseCourse";
         this.state={
+            searchTerm: '',
             availableCourses: [],
             selectedCourses: [],
-            role: "student"
+            role: "student",
+            cip: this.props.cipLogin
         };
 
         this.handleRemove = this.handleRemove.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
         this.search =this.search.bind(this);
         this.confirmCourses = this.confirmCourses.bind(this);
+        this.handleTermChange = this.handleTermChange.bind(this);
 
-        this.search();
     }
 
     handleRemove(courseToRemove){
@@ -47,14 +49,28 @@ class StudentChooseCourse extends React.Component{
     }
 
     search(){
-        Zeus.search().then(results => this.setState({availableCourses: results}));
+        if(!this.state.searchTerm){
+            alert('Please choose a term');
+        } else {
+            Zeus.search(this.state.searchTerm,this.state.cip).then(results => this.setState({availableCourses: results}));
+        }
+        
+    }
+
+    handleTermChange(term){
+        this.setState({searchTerm: term});
     }
 
     confirmCourses(){
         /*Send a POST request here*/
         /*SelectedCourses get sent*/
         // eslint-disable-next-line no-undef
-        const response = TutoApp.send(this.state, this.endPoint);
+        const dataToSend = {
+            title: 'foo',
+            body: 'bar',
+            userId: 1
+        };
+        const response = TutoApp.send(dataToSend, 'https://jsonplaceholder.typicode.com/posts');
         console.log(response)
     }
 
@@ -65,7 +81,9 @@ class StudentChooseCourse extends React.Component{
                                availableCourses={this.state.availableCourses}
                                onAdd={this.handleAdd}
                                onRemove={this.handleRemove}
-                               onConfirm={this.confirmCourses}/>
+                               onConfirm={this.confirmCourses}
+                               onTermChange={this.handleTermChange}
+                               onSearch={this.search}/>
             </div>
         )
     }

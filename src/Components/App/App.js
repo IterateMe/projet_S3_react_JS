@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.css';
 import {Route} from 'react-router-dom';
 import Acceuil from '../../Route/Acceuil/Acceuil';
-//import inscription_mentor from "../Route/inscription_mentor";
-//import InscriptionEtudiant from '../Route/inscription_etudiant';
 import logo from './logoEtNom.jpg'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
 import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
-import MentorChooseCourse from '../../Route/chooseCourses/MentorChooseCourse';
-import StudentChooseCourse from '../../Route/chooseCourses/StudentChooseCourse';
-import SignInPage from "../../Route/SignInPage/SignInPage";
-import SignUp from "../SignUp/SignUp";
+import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
+
+import './App.css';
 
 
 class App extends React.Component{
@@ -36,12 +32,14 @@ class App extends React.Component{
         </div>
         <div className="App-Main">
           <Route exact path="/" render={(props) => <Acceuil {...props} cipLogin={this.handleCipChange}/>}/>
-          {/*<Route exact path="/inscription-etudiant" component={InscriptionEtudiant}/>*/}
-          {/*<Route exact path="/inscription-mentor" component={inscription_mentor}/>*/}
           <Route exact path="/inscription" render={(props) => <SignUpPage {...props} cipLogin={this.handleCipChange}/>}/>
           <Route exact path="/main-menu" component={MainMenu}/>
-          <Route exact path="/mentor-signup" render={(props) => <MentorChooseCourse {...props} cipLogin={this.state.cip}/>}/>
-          <Route exact path="/student-signup" component={StudentChooseCourse}/>
+          <Route exact path="/mentor-signup" render={(props) => <ChooseCourse {...props} 
+            cipLogin={this.state.cip} 
+            role={'mentor'}/>}/>
+          <Route exact path="/student-signup" render={(props) => <ChooseCourse {...props} 
+            cipLogin={this.state.cip} 
+            role={'student'}/>}/>
         </div>          
       </div>
     );

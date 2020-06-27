@@ -3,10 +3,6 @@ import './CourseList.css';
 import Course from '../Course/Course.js';
 
 class CourseList extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     render(){
         return (
             <div className="CourseList">

@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainMenu.css';
-import {goToMentorSignUp} from '../../Components/NavItems';
+import {goToMentorSignUp, goToStudentSignUp} from '../../Components/NavItems';
 
 class MainMenu extends React.Component{
     constructor(props){
@@ -18,7 +18,7 @@ class MainMenu extends React.Component{
     }
 
     handleStudentSignUp(){
-
+        goToStudentSignUp();
     }
 
     /* More components can be added so functions will be added here*/

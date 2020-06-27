@@ -2,15 +2,16 @@ import React from 'react';
 import CourseResults from '../../Components/CourseResults/CourseResults';
 import Zeus from '../../util/Zeus.js';
 import TutoApp from '../../util/TutoApp';
+import { goToMainMenu } from '../../Components/NavItems';
 
-class MentorChooseCourse extends React.Component{
+class ChooseCourse extends React.Component{
     constructor(props){
         super(props);
         this.endPoint = "/chooseCourse";
         this.state={
             availableCourses: [],
             selectedCourses: [],
-            role: "mentor",
+            role: this.props.role,
             cip: this.props.cipLogin
         };
 
@@ -19,6 +20,7 @@ class MentorChooseCourse extends React.Component{
         this.search =this.search.bind(this);
         this.handleTermChange = this.handleTermChange.bind(this);
         this.confirmCourses = this.confirmCourses.bind(this);
+        this.handleBack = this.handleBack.bind(this);
     }
 
     handleRemove(courseToRemove){
@@ -50,9 +52,17 @@ class MentorChooseCourse extends React.Component{
         this.setState({searchTerm: term});
     }
 
+    handleBack(){
+        goToMainMenu();
+    }
+
     search(){
-        console.log(this.state.searchTerm);
-        Zeus.search(this.state.searchTerm, this.state.cip).then(results => this.setState({availableCourses: results}));
+        if(!this.state.searchTerm){
+            alert('Please choose a term');
+        } else {
+            Zeus.search(this.state.searchTerm,this.state.cip).then(results => this.setState({availableCourses: results}));
+        }
+        
     }
 
     confirmCourses(){
@@ -85,10 +95,11 @@ class MentorChooseCourse extends React.Component{
                     onRemove={this.handleRemove}
                     onConfirm={this.confirmCourses}
                     onTermChange={this.handleTermChange}
-                    onSearch={this.search}/>
+                    onSearch={this.search}
+                    onBack={this.handleBack}/>
             </div>
         )
     }
 }
 
-export default MentorChooseCourse;
+export default ChooseCourse;
