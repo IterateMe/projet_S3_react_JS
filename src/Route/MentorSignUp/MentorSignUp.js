@@ -57,7 +57,6 @@ class MentorSignUp extends React.Component{
                     availableCourses={this.state.availableCourses} 
                     onAdd={this.handleAdd} 
                     onRemove={this.handleRemove}/>
-                    <SidebarLayout/>
             </div>
         )
     }

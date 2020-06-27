@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './Sidebar.css';
 import {render} from "react-dom";
 import {Route} from "react-router-dom";
-import {goToMainMenu, goToMentorSignUp} from "../NavItems";
+import {goToMainMenu, goToMentorSignUp, goToStudentSignUp} from "../NavItems";
 
 
 
@@ -22,8 +22,10 @@ const Sidebar = (props) => {
         <div className ={sidebarClass}>
             <h2>Menu de navigation</h2>
             <div className="lien">
-                <button onClick={() => goToMainMenu}>Sign Up</button>
-                <button onClick={() => goToMentorSignUp}>Mentor Sign Up</button>
+
+                <button onClick={goToMainMenu}>Main Menu</button>
+                <button onClick={goToStudentSignUp}>Student Sign Up</button>
+                <button onClick={goToMentorSignUp}>Mentor Sign Up</button>
             </div>
             <button onClick={closeHandler} id="close">&times; close</button>
         </div>

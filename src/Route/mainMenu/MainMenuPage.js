@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainMenu.css';
+import SidebarLayout from "../../Components/SidebarLayout/SidebarLayout";
 
 
 class MainMenu extends React.Component{
@@ -28,12 +29,10 @@ class MainMenu extends React.Component{
 
             <div className="Main-Menu">
 
-
-
                 <h2>This is a very Rough Draft</h2>
                 <button className="Menu-Button"onClick={this.handleMentorSignUp}>Mentor Sign Up</button>
                 <button className="Menu-Button"onClick={this.handleStudentSignUp}>Student Sign Up</button>
-                <SidebarLayout/>
+
             </div>
 
 

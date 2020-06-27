@@ -30,7 +30,6 @@ const SidebarLayout = ({children}) => {
         <Fragment>
             {sidebar}
             <Toggle click={openHandler}/>
-
         </Fragment>
 
     )
