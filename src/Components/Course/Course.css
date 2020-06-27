@@ -1,19 +1,17 @@
 .course {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: #ffff;
     border: 2px solid #000000;
-    margin: 0.1rem;
+    margin-bottom: 0.1rem;
 }
   
   .course-information {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 72px;
+    justify-self: left;
+    padding: 5px;
   }
   
   .course-information h3 {
@@ -28,10 +26,8 @@
 
   .course-action{
     color: #000000;
-    background-color: #ffffff;
-    cursor: pointer;
+    background-color: rgba(255,255,255, 0);
     padding: .5rem;
     font-size: 1.05rem;
-    transition: color .25s;
     border: 0px;
   }

@@ -26,14 +26,15 @@ class SignInPage extends React.Component{
     }
 
     handleSignIn(){
-        console.log(this.state.username);
-        console.log(this.state.password);
-        goToMainMenu();
-
+        this.props.cipLogin(this.state.username);
+        //goToMainMenu()
+        //console.log(this.state.username);
+        //console.log(this.state.password);
     }
 
     handleSignUp(){
-        goToSignUp();
+        this.props.onNextPage('sign-up')
+        //goToSignUp();
     }
 
 

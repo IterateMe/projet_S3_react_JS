@@ -1,3 +1,5 @@
+
+
 .available {
   overflow-y: scroll;
   width: 200px;
@@ -8,8 +10,24 @@
   margin-left: 2rem;
 }
 
+.search-button {
+  cursor: pointer;
+  width: 8.11rem;
+  padding: .77rem;
+  margin-top: 0.6rem;
+  border-radius: 54px;
+  background-color: #009E00;
+  text-align: center;
+  font-size: .833rem;
+  transition: background-color .25s;
+  border: 0px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
 .selected {
-  float: left;
+  float: right;
   overflow-y: scroll;
   width: 200px;
   height: 300px;
@@ -22,4 +40,30 @@
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+.confirm-button {
+  position: relative;
+  bottom: 0%;
+  left: 37%;
+  cursor: pointer;
+  width: 8.11rem;
+  padding: .77rem;
+  margin-top: 0.6rem;
+  border-radius: 54px;
+  background-color: #009E00;
+  text-align: center;
+  font-size: .833rem;
+  transition: background-color .25s;
+  border: 0px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.confirm-button:hover{
+  background-color: #006D00;
+}
+
+.search-button:hover{
+  background-color: #006D00;
 }
