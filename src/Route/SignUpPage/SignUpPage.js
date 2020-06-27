@@ -41,7 +41,8 @@ class SignUpPage extends React.Component{
   }
 
   handleBackButton(){
-    goToSignIn();
+    this.props.onNextPage('sign-in');
+    //goToSignIn();
   }
 
   render(){

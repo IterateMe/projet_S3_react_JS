@@ -53,12 +53,13 @@ class ChooseCourse extends React.Component{
     }
 
     handleBack(){
-        goToMainMenu();
+        this.props.onNextPage('main-menu');
+        //goToMainMenu()
     }
 
     search(){
-        if(!this.state.searchTerm){
-            alert('Please choose a term');
+        if(!this.state.searchTerm || !this.state.cip){
+            alert('Did you select a search semester or did you sign in?');
         } else {
             Zeus.search(this.state.searchTerm,this.state.cip).then(results => this.setState({availableCourses: results}));
         }

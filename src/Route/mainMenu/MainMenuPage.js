@@ -1,24 +1,22 @@
 import React from 'react';
 import './MainMenu.css';
-import {goToMentorSignUp, goToStudentSignUp} from '../../Components/NavItems';
 
 class MainMenu extends React.Component{
     constructor(props){
         super(props)
 
-        this.state = {
-            userRole: '',
-        }
-
-
+        this.handleMentorSignUp = this.handleMentorSignUp.bind(this);
+        this.handleStudentSignUp = this.handleStudentSignUp.bind(this);
     }
 
     handleMentorSignUp(){
-        goToMentorSignUp();
+        this.props.onNextPage('mentor-signup');
+        //goToMentorSignUp()
     }
 
     handleStudentSignUp(){
-        goToStudentSignUp();
+        this.props.onNextPage('student-signup');
+        //goToStudentSignUp()
     }
 
     /* More components can be added so functions will be added here*/

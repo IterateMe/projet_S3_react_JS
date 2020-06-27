@@ -9,7 +9,6 @@ const Zeus = {
                 })
                 .then(jsonResponse => {
                     if (!jsonResponse){
-                        console.log('Nothing to show here. Move on');
                         return [];
                     } else {
                         let currIndex = -1;
@@ -22,7 +21,6 @@ const Zeus = {
                                 credits: course.credit_annuaire
                             }
                         })
-
                         return courseArray.filter((course, index, self) => {
                             return (index === self.findIndex((c) => c.name === course.name))
                         });

@@ -21,8 +21,6 @@ class Login extends React.Component{
     }
     
     handleSubmitSignIn(){
-        /*test une requete sur le backend*/
-        //TutoApp.getStudent();
         this.props.onSignIn();
     }
 
