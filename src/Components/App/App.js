@@ -7,6 +7,7 @@ import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
 
 import './App.css';
 
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -47,6 +48,7 @@ class App extends React.Component{
         <div className="App-Header">
           <img className="HeaderImage" src={logo} alt="School Campus"/>
         </div>
+
         <div className="App-Main">
           {componentToRender}
         </div>          
