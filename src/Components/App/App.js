@@ -56,7 +56,7 @@ class App extends React.Component{
 
         <div className="App-Main">
           {componentToRender}
-          {menuDeroulant}
+          {/*menuDeroulant*/}
         </div>          
       </div>
     );

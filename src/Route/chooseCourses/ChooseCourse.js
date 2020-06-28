@@ -79,8 +79,14 @@ class ChooseCourse extends React.Component{
             cip: this.state.cip
         }
         const response = TutoApp.send(dataToSend, this.endPoint);
+        let dataToSend = []
         */
-
+        /*this.state.selectedCourses.forEach((course) => {
+            dataToSend.push({
+                cip: this.state.cip
+                cours_id: course.name
+            })
+        })*/
        const dataToSend = {
         title: 'foo',
         body: 'bar',
