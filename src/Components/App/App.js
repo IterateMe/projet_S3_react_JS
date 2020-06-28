@@ -6,6 +6,8 @@ import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
 import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
 
 import './App.css';
+import SidebarLayout from "../SidebarLayout/SidebarLayout";
+
 
 class App extends React.Component{
   constructor(props){
@@ -41,14 +43,20 @@ class App extends React.Component{
     } else if(this.state.currentPage === 'sign-up'){
       componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
     }
+    let menuDeroulant;
+    if(this.state.currentPage !== 'sign-in'){
+      menuDeroulant = <SidebarLayout/>
+    }
 
     return (
       <div className="App">
         <div className="App-Header">
           <img className="HeaderImage" src={logo} alt="School Campus"/>
         </div>
+
         <div className="App-Main">
           {componentToRender}
+          {menuDeroulant}
         </div>          
       </div>
     );

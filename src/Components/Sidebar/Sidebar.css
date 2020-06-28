@@ -1,0 +1,49 @@
+
+.sidebar{
+    top:150px;
+    height: 100vh;
+    padding-left:20px;
+    background-color: rgba(11,156,49,0.8);
+    
+    position: absolute;
+    color: white;
+    width:400px;
+
+    z-index: 200;
+    left: -100%;
+    animation: slide-open 1s forwards;
+}
+.sidebar.close{
+    left:0;
+    animation: slide-closed 2s forwards;
+}
+
+
+@keyframes slide-open {
+    100% { left:0 }
+}
+
+@keyframes slide-closed {
+    100% { left:-100% }
+}
+
+.lien button{
+
+    width: 200px;
+    display: block;
+    text-align: left;
+    opacity: 1;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#close{
+    position: relative;
+    left: 0.2vw;
+    top: 20vh;
+}
+
+button:hover {
+    background-color: darkgreen;
+}

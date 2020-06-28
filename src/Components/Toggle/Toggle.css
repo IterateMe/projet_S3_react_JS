@@ -1,0 +1,12 @@
+#toggle{
+
+    cursor: pointer;
+    font-size: 60px;
+    color: black;
+    padding: 0px;
+    width: 60px;
+
+    position:absolute;
+    top: 170px;
+    left: 20px;
+}
