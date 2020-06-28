@@ -3,7 +3,7 @@ import Toggle from "../Toggle/Toggle";
 import Sidebar from "../Sidebar/Sidebar";
 
 
-const SidebarLayout = ({children}) => {
+const SidebarLayout = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
 

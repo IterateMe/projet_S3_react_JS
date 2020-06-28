@@ -1,6 +1,6 @@
 import React from 'react';
 import Acceuil from '../../Route/Acceuil/Acceuil';
-import logo from './logoEtNom.jpg'
+import logo from './usherbrooke.png'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
 import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
 import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
@@ -43,6 +43,7 @@ class App extends React.Component{
     } else if(this.state.currentPage === 'sign-up'){
       componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
     }
+
     let menuDeroulant;
     if(this.state.currentPage !== 'sign-in' || this.state.currentPage !== 'sign-up'){
       menuDeroulant = <SidebarLayout onNextPage={this.changePage}/>
@@ -51,7 +52,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <div className="App-Header">
-          <img className="HeaderImage" src={logo} alt="School Campus"/>
+          <img className="HeaderImage" src={logo} alt="usherbrooke logo"/>
         </div>
 
         <div className="App-Main">
