@@ -21,7 +21,7 @@ const SidebarLayout = ({children}) => {
 
     let sidebar
     if(sidebarOpen){
-        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"}/>
+        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} onNextPage={this.props.onNextPage}/>
     }
 
 

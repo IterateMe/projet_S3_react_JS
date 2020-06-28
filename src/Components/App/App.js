@@ -44,8 +44,8 @@ class App extends React.Component{
       componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
     }
     let menuDeroulant;
-    if(this.state.currentPage !== 'sign-in'){
-      menuDeroulant = <SidebarLayout/>
+    if(this.state.currentPage !== 'sign-in' || this.state.currentPage !== 'sign-up'){
+      menuDeroulant = <SidebarLayout onNextPage={this.changePage}/>
     }
 
     return (
