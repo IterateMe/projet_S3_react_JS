@@ -20,12 +20,12 @@ const Sidebar = (props) => {
 
     return(
         <div className ={sidebarClass}>
-            <h2>Menu de navigation</h2>
+            <h2>Menu</h2>
             <div className="lien">
 
-                <button onClick={goToMainMenu}>Main Menu</button>
-                <button onClick={goToStudentSignUp}>Student Sign Up</button>
-                <button onClick={goToMentorSignUp}>Mentor Sign Up</button>
+                <button onClick={this.props.onNextPage('main-menu')}>Main Menu</button>
+                <button onClick={this.props.onNextPage('student-signup')}>Student Sign Up</button>
+                <button onClick={this.props.onNextPage('mentor-signup')}>Mentor Sign Up</button>
             </div>
             <button onClick={closeHandler} id="close">&times; close</button>
         </div>

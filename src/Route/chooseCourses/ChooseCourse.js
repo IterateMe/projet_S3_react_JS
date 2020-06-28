@@ -58,10 +58,13 @@ class ChooseCourse extends React.Component{
     }
 
     search(){
+        let coursesToAdd = [];
         if(!this.state.searchTerm || !this.state.cip){
             alert('Did you select a search semester or did you sign in?');
         } else {
-            Zeus.search(this.state.searchTerm,this.state.cip).then(results => this.setState({availableCourses: results}));
+           coursesToAdd = Zeus.search(this.state.searchTerm,this.state.cip)
+                .then(results => Zeus.getStudiedCourses(this.state.cip, results))
+                .then(results => this.setState({availableCourses: results}));
         }
         
     }
@@ -76,8 +79,14 @@ class ChooseCourse extends React.Component{
             cip: this.state.cip
         }
         const response = TutoApp.send(dataToSend, this.endPoint);
+        let dataToSend = []
         */
-
+        /*this.state.selectedCourses.forEach((course) => {
+            dataToSend.push({
+                cip: this.state.cip
+                cours_id: course.name
+            })
+        })*/
        const dataToSend = {
         title: 'foo',
         body: 'bar',

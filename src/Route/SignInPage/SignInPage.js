@@ -2,6 +2,7 @@ import React from 'react';
 import Login from'../../Components/Login/Login.js';
 import {goToSignUp} from '../../Components/NavItems.js';
 import {goToMainMenu} from '../../Components/NavItems.js';
+import TutoApp from '../../util/TutoApp.js';
 
 class SignInPage extends React.Component{
     constructor(props){
@@ -26,7 +27,15 @@ class SignInPage extends React.Component{
     }
 
     handleSignIn(){
-        this.props.cipLogin(this.state.username);
+        TutoApp.validateSignIn(this.state.username)
+            .then((response) => {
+                console.log(response);
+                if(response){
+                    this.props.cipLogin(this.state.username);
+                } else {
+                    alert('Please Sign up!');
+                }
+            });
         //goToMainMenu()
         //console.log(this.state.username);
         //console.log(this.state.password);
