@@ -12,7 +12,8 @@ class ChooseCourse extends React.Component{
             availableCourses: [],
             selectedCourses: [],
             role: this.props.role,
-            cip: this.props.cipLogin
+            cip: this.props.cipLogin,
+            semester: ""
         };
 
         this.handleRemove = this.handleRemove.bind(this);
@@ -21,6 +22,7 @@ class ChooseCourse extends React.Component{
         this.handleTermChange = this.handleTermChange.bind(this);
         this.confirmCourses = this.confirmCourses.bind(this);
         this.handleBack = this.handleBack.bind(this);
+        this.handleSemesterChange = this.handleSemesterChange.bind(this)
     }
 
     handleRemove(courseToRemove){
@@ -66,7 +68,6 @@ class ChooseCourse extends React.Component{
                 .then(results => Zeus.getStudiedCourses(this.state.cip, results))
                 .then(results => this.setState({availableCourses: results}));
         }
-        
     }
 
     confirmCourses(){
@@ -78,37 +79,39 @@ class ChooseCourse extends React.Component{
             selectedCourses: this.state.selectedCourses,
             cip: this.state.cip
         }
-        const response = TutoApp.send(dataToSend, this.endPoint);
+        const response = TutoApp.send(dataToSend, this.endPoint);*/
         let dataToSend = []
-        */
-        /*this.state.selectedCourses.forEach((course) => {
+
+        this.state.selectedCourses.forEach((course) => {
             dataToSend.push({
                 cip: this.state.cip,
-                session_id:
-                statut_id: this.state.role,
+                session_id: this.state.semester,
+                status_id: this.state.role,
                 cours_id: course.name
             })
-        })*/
-       const dataToSend = {
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-        }
+        })
         const response = TutoApp.send(dataToSend, 'https://jsonplaceholder.typicode.com/posts');
         console.log(response)
+    }
+
+    handleSemesterChange(semester){
+        this.setState(semester)
     }
 
     render(){
         return(
             <div className="Mentor-SignUp">
-                <CourseResults selectedCourses={this.state.selectedCourses} 
-                    availableCourses={this.state.availableCourses} 
+                <CourseResults
+                    selectedCourses={this.state.selectedCourses}
+                    availableCourses={this.state.availableCourses}
+                    semesterID = {this.handleSemesterChange}
                     onAdd={this.handleAdd} 
                     onRemove={this.handleRemove}
                     onConfirm={this.confirmCourses}
                     onTermChange={this.handleTermChange}
                     onSearch={this.search}
-                    onBack={this.handleBack}/>
+                    onBack={this.handleBack}
+                />
             </div>
         )
     }

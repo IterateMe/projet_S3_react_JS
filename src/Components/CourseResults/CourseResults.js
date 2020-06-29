@@ -10,6 +10,7 @@ class CourseResults extends React.Component{
 
     handleSemesterChange(event){
         this.props.onTermChange(event.target.value);
+        this.props.semesterID({semester: event.target.value})
     }
     render(){
         return (
