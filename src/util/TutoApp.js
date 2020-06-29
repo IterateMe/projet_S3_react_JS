@@ -31,8 +31,8 @@ const TutoApp = {
             })
             .then(jsonResponse => {
                 console.log(jsonResponse);
-                let message =  `Added\nid: ${jsonResponse.id} \ntitle: ${jsonResponse.title} \nbody: ${jsonResponse.body}`;
-                alert(message);
+                // let message =  `Added\nid: ${jsonResponse.id} \ntitle: ${jsonResponse.title} \nbody: ${jsonResponse.body}`;
+                // alert(message);
             })
     }
 }
