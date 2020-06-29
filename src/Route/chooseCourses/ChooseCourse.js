@@ -83,7 +83,9 @@ class ChooseCourse extends React.Component{
         */
         /*this.state.selectedCourses.forEach((course) => {
             dataToSend.push({
-                cip: this.state.cip
+                cip: this.state.cip,
+                session_id:
+                statut_id: this.state.role,
                 cours_id: course.name
             })
         })*/

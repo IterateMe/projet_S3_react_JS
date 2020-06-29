@@ -5,7 +5,6 @@ import './CourseResults.css';
 class CourseResults extends React.Component{
     constructor(props){
         super(props);
-
         this.handleSemesterChange = this.handleSemesterChange.bind(this);
     }
 
@@ -24,7 +23,7 @@ class CourseResults extends React.Component{
                 <div className="available">
                 <form>
                     <label>Semester</label>
-                    <input type="text" placeholder="Exemple: E20" onChange={this.handleSemesterChange}></input>
+                    <input type="text" placeholder="Exemple: E20" onChange={this.handleSemesterChange}/>
                 </form>
                 <button onClick={this.props.onSearch} className="search-button">Search</button> 
                 <h3>Available Courses</h3>
