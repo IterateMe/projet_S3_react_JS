@@ -1,6 +1,7 @@
 import React from 'react';
 import SignUp from '../../Components/SignUp/SignUp.js';
 import {goToSignIn} from '../../Components/NavItems.js';
+import TutoApp from '../../util/TutoApp';
 
 class SignUpPage extends React.Component{
   constructor(props){
@@ -35,6 +36,13 @@ class SignUpPage extends React.Component{
       console.log(this.state.username);
       console.log(this.state.password);
       console.log(this.state.confirmedPassword);
+      let dataToSend = {
+        cip: this.state.username,
+        email: this.state.username + "@usherbrooke.ca",
+        password: this.state.password
+      }
+      let response = TutoApp.send(dataToSend, "");
+      console.log(response)
     } else {
       console.log('Invalid Credentials.');
     }  
