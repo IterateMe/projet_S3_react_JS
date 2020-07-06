@@ -34,6 +34,14 @@ const TutoApp = {
                 // let message =  `Added\nid: ${jsonResponse.id} \ntitle: ${jsonResponse.title} \nbody: ${jsonResponse.body}`;
                 // alert(message);
             })
+    },
+
+    getCourseAsMentor(){
+        
+    },
+
+    getCourseAsStudent(){
+
     }
 }
 
