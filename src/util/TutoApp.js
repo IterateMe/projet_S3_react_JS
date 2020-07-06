@@ -50,12 +50,15 @@ const TutoApp = {
                 if(!jsonResponse){
                     return []
                 } else {
-                    return {
-                        id: jsonResponse.cours_id,
-                        semester: jsonResponse.session_id,
-                        student: jsonResponse.etudiant,
-                        mentor: jsonResponse.mentore_par
-                    }
+                    let courseArray = jsonResponse.map(course => {
+                        return {
+                            id: course.cours_id,
+                            semester: course.session_id,
+                            student: course.etudiant,
+                            mentor: course.mentore_par
+                        }
+                    })
+                    return courseArray
                 }
             })
     },
@@ -71,14 +74,17 @@ const TutoApp = {
                 if(!jsonResponse){
                     return []
                 } else {
-                    return {
-                        id: jsonResponse.cours_id,
-                        semester: jsonResponse.session_id,
-                        student: jsonResponse.etudiant,
-                        mentor: jsonResponse.mentore_par
-                    }
-                }
-            })
+                    let courseArray = jsonResponse.map(course => {
+                        return {
+                            id: course.cours_id,
+                            semester: course.session_id,
+                            student: course.etudiant,
+                            mentor: course.mentore_par
+                        }
+                    })
+                    return courseArray
+            }
+        })
     }
 }
 

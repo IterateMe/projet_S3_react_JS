@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment} from "react";
 import Toggle from "../Toggle/Toggle";
 import Sidebar from "../Sidebar/Sidebar";
 
@@ -38,37 +38,4 @@ class SidebarLayout extends React.Component{
     }
 }
 
-/*
-const SidebarLayout = () => {
-
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-
-    const openHandler = () =>{
-        if(!sidebarOpen){
-            setSidebarOpen(true)
-        }else{
-            setSidebarOpen(false)
-        }
-    }
-
-    const sidebarCloseHandler = () =>{
-        setSidebarOpen(false)
-    }
-
-    let sidebar
-    if(sidebarOpen){
-        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={this.state.state} onNextPage={this.props.onNextPage}/>
-    }
-
-
-    return(
-
-        <Fragment>
-            {sidebar}
-            <Toggle click={openHandler}/>
-        </Fragment>
-
-    )
-}
-*/
 export default SidebarLayout

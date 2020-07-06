@@ -36,14 +36,10 @@ class SignInPage extends React.Component{
                     alert('Please Sign up!');
                 }
             });
-        //goToMainMenu()
-        //console.log(this.state.username);
-        //console.log(this.state.password);
     }
 
     handleSignUp(){
         this.props.onNextPage('sign-up')
-        //goToSignUp();
     }
 
 
