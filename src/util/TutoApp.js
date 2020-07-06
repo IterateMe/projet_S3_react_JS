@@ -1,7 +1,7 @@
 const TutoApp = {
 
-    validateSignIn(cip){
-        return fetch(`http://localhost:8080/tutoratApp/api/users/inscription?cip=${cip}`)
+    async validateSignIn(cip){
+        return fetch(`http://localhost:8080/tutoratApp/api/users?cip=${cip}`)
             .then(response => {
                 if (response.ok){
                     return response.json();
@@ -26,13 +26,16 @@ const TutoApp = {
             })
             .then(response =>{
                 if(response.ok) {
-                    return response.json();
+                    alert("Success")
                 }
             })
             .then(jsonResponse => {
                 console.log(jsonResponse);
                 // let message =  `Added\nid: ${jsonResponse.id} \ntitle: ${jsonResponse.title} \nbody: ${jsonResponse.body}`;
                 // alert(message);
+            })
+            .catch(erreur => {
+                alert(erreur)
             })
     },
 
