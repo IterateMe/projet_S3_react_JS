@@ -11,12 +11,14 @@ html {
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(26,148,49,1));
-  /*background-color: #006D00;*/
   height: 150px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: dimgray;
 }
 
 .HeaderImage{
-  top: 10px;
+  top: 20px;
   position: absolute;
   border-radius: 10px;
   margin-left: 10px;

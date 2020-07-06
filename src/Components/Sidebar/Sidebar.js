@@ -64,7 +64,7 @@ const Sidebar = (props) => {
             <div className="lien">
 
                 <button onClick={() =>alert('hello')}>Main Menu</button>
-                <button onClick={null}>Student Sign Up</button>
+                <button onClick={this.props.}>Student Sign Up</button>
                 <button onClick={null}>Mentor Sign Up</button>
             </div>
             <button onClick={closeHandler} id="close">&times; close</button>
