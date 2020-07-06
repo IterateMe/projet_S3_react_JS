@@ -1,14 +1,19 @@
 .Main-Menu {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 50%;
+    width: 80vw;
+    height: 50vh;
     padding: 2.27rem 1.16rem;
     background-color: #ffff;
     border: 2px solid #000000;
     margin-top: 2rem;
+}
+
+.buttons{
+    justify-content: center;
+    padding: 2.27rem 1.16rem;
+
 }
 
 .Menu-Button {
