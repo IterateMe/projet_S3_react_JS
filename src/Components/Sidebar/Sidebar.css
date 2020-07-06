@@ -1,6 +1,6 @@
 
 .sidebar{
-    top:150px;
+    top:170px;
     height: 100vh;
     padding-left:20px;
     background-color: rgba(11,156,49,0.8);
@@ -45,5 +45,6 @@
 }
 
 button:hover {
-    background-color: darkgreen;
+    transition: background-color .25s;
+    background-color: #006D00;
 }

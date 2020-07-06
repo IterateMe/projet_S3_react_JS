@@ -45,7 +45,7 @@ class App extends React.Component{
     }
 
     let menuDeroulant;
-    if(this.state.currentPage !== 'sign-in' || this.state.currentPage !== 'sign-up'){
+    if(this.state.currentPage !== 'sign-in'){
       menuDeroulant = <SidebarLayout onNextPage={this.changePage}/>
     }
 
