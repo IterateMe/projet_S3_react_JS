@@ -7,8 +7,12 @@
     height: 250px;
     padding: 2.27rem 1.16rem;
     background-color: #ffff;
-    border: 2px solid #000000;
+    /*border: 2px solid #000000;*/
     margin: 0.1rem;
+    border-style: double;
+    border-width: 10px;
+    border-color: dimgray;
+    border-radius: 20px;
 }
 
 .loginBox h2 {
@@ -34,6 +38,10 @@
     border: 0px;
     color: #ffffff;
     font-weight: 500;
+    position: relative;
+
+    left:10%;
+
 }
 
 .loginButton:hover{
