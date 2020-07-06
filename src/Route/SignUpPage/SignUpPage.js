@@ -41,7 +41,7 @@ class SignUpPage extends React.Component{
         email: this.state.username + "@usherbrooke.ca",
         password: this.state.password
       }
-      let response = TutoApp.send(dataToSend, "");
+      let response = TutoApp.send(dataToSend, "/tutoratApp/api/users");
       console.log(response)
     } else {
       console.log('Invalid Credentials.');

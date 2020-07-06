@@ -90,7 +90,7 @@ class ChooseCourse extends React.Component{
                 cours_id: course.name
             })
         })
-        const response = TutoApp.send(dataToSend, 'https://jsonplaceholder.typicode.com/posts');
+        const response = TutoApp.send(dataToSend, '/tutoratApp/api/users/inscription');
         console.log(response)
     }
 
