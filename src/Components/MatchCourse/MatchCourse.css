@@ -1,0 +1,33 @@
+.course {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border: 2px solid #000000;
+    margin-bottom: 0.1rem;
+}
+
+.course-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    padding: 5px;
+}
+
+.course-information h3 {
+    margin-bottom: .22rem;
+}
+
+.course-information p {
+    font-size: .83rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+.course-action{
+    color: #000000;
+    background-color: rgba(255,255,255, 0);
+    padding: .5rem;
+    font-size: 1.05rem;
+    border: 0px;
+}
