@@ -9,7 +9,7 @@ class SidebarLayout extends React.Component{
         super(props)
 
         this.state = {
-            isOpen = false,
+            isOpen: false,
             state: 'sidebar close',
         }
 
@@ -17,8 +17,15 @@ class SidebarLayout extends React.Component{
     }
 
     handleClick(){
-        isOpen = this.state.isOpen
-        this.setState({isOpen: !isOpen, state: 'sidebar'})
+        let isOpen = this.state.isOpen
+        let stateStr;
+        if (this.state.state === 'sidebar close'){
+            stateStr = 'sidebar'
+        }
+        else{
+            stateStr = 'sidebar close'
+        }
+        this.setState({isOpen: !isOpen, state: stateStr})
     }
 
     render(){
@@ -31,6 +38,7 @@ class SidebarLayout extends React.Component{
     }
 }
 
+/*
 const SidebarLayout = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -62,5 +70,5 @@ const SidebarLayout = () => {
 
     )
 }
-
+*/
 export default SidebarLayout

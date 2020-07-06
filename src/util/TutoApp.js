@@ -39,7 +39,7 @@ const TutoApp = {
             })
     },
 
-    getCourseAsMentorConfirmed(){
+    getCourseAsMentorConfirmed(cip){
         return fetch(`http://localhost:8080/tutoratApp/api/jumelages?mentore_par=${cip}`)
             .then(response => {
                 if(response.ok){
@@ -51,16 +51,16 @@ const TutoApp = {
                     return []
                 } else {
                     return {
-                        id: cours_id,
-                        semester: session_id,
-                        student: etudiant,
-                        mentor: mentore_par
+                        id: jsonResponse.cours_id,
+                        semester: jsonResponse.session_id,
+                        student: jsonResponse.etudiant,
+                        mentor: jsonResponse.mentore_par
                     }
                 }
             })
     },
 
-    getCourseAsStudent(){
+    getCourseAsStudent(cip){
         return fetch(`http://localhost:8080/tutoratApp/api/jumelages?etudiant=${cip}`)
             .then(response => {
                 if(response.ok){
@@ -72,10 +72,10 @@ const TutoApp = {
                     return []
                 } else {
                     return {
-                        id: cours_id,
-                        semester: session_id,
-                        student: etudiant,
-                        mentor: mentore_par
+                        id: jsonResponse.cours_id,
+                        semester: jsonResponse.session_id,
+                        student: jsonResponse.etudiant,
+                        mentor: jsonResponse.mentore_par
                     }
                 }
             })

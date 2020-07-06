@@ -16,10 +16,7 @@ class Sidebar extends React.Component{
 
     handleClose(event){
         event.preventDefault()
-        this.props.onChangeView
-        setTimeout(() => {
-            props.close()
-        },1000)
+        this.props.onChangeView()
     }
 
     render(){
@@ -28,9 +25,9 @@ class Sidebar extends React.Component{
                 <h2>Menu</h2>
                 <div className="lien">
     
-                    <button onClick={() =>alert('hello')}>Main Menu</button>
-                    <button onClick={null}>Student Sign Up</button>
-                    <button onClick={null}>Mentor Sign Up</button>
+                    <button onClick={() => this.props.onNextPage('main-menu')}>Main Menu</button>
+                    <button onClick={() => this.props.onNextPage('student-signup')}>Student Sign Up</button>
+                    <button onClick={() => this.props.onNextPage('mentor-signup')}>Mentor Sign Up</button>
                 </div>
                 <button onClick={this.handleClose} id="close">&times; Close</button>
             </div>
