@@ -3,6 +3,34 @@ import Toggle from "../Toggle/Toggle";
 import Sidebar from "../Sidebar/Sidebar";
 
 
+
+class SidebarLayout extends React.Component{
+    constructor(props){
+        super(props)
+
+        this.state = {
+            isOpen = false,
+            state: 'sidebar close',
+        }
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(){
+        isOpen = this.state.isOpen
+        this.setState({isOpen: !isOpen, state: 'sidebar'})
+    }
+
+    render(){
+        return(
+            <Fragment>
+                <Sidebar onChangeView={this.handleClick} sidebar={this.state.state} onNextPage={this.props.onNextPage}/>
+                <Toggle click={this.handleClick}/>
+            </Fragment>    
+        )
+    }
+}
+
 const SidebarLayout = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -21,7 +49,7 @@ const SidebarLayout = () => {
 
     let sidebar
     if(sidebarOpen){
-        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} onNextPage={this.props.onNextPage}/>
+        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={this.state.state} onNextPage={this.props.onNextPage}/>
     }
 
 

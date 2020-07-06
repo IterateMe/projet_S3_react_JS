@@ -39,13 +39,54 @@ const TutoApp = {
             })
     },
 
-    getCourseAsMentor(){
-        
+    getCourseAsMentorConfirmed(){
+        return fetch(`http://localhost:8080/tutoratApp/api/jumelages?mentore_par=${cip}`)
+            .then(response => {
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(jsonResponse => {
+                if(!jsonResponse){
+                    return []
+                } else {
+                    return {
+                        id: cours_id,
+                        semester: session_id,
+                        student: etudiant,
+                        mentor: mentore_par
+                    }
+                }
+            })
     },
 
     getCourseAsStudent(){
-
+        return fetch(`http://localhost:8080/tutoratApp/api/jumelages?etudiant=${cip}`)
+            .then(response => {
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(jsonResponse => {
+                if(!jsonResponse){
+                    return []
+                } else {
+                    return {
+                        id: cours_id,
+                        semester: session_id,
+                        student: etudiant,
+                        mentor: mentore_par
+                    }
+                }
+            })
     }
 }
 
 export default TutoApp;
+
+/*
+*      "cours_id": "GEN101",
+*      "session_id": "E20",
+*      "etudiant": "frev2701",
+*      "mentore_par": "graw3301"
+*/

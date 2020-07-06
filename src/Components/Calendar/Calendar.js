@@ -28,8 +28,7 @@ class Calendar extends React.Component {
         initialView="dayGridMonth"
         events={this.state.events}
         dateClick={this.addEvent}
-        eventColor={'#378006'}
-      />
+        eventColor={'#378006'}/>
     )
   }
 }

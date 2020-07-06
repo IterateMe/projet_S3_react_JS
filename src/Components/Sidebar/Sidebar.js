@@ -7,7 +7,41 @@ import MainMenu from "../../Route/mainMenu/MainMenuPage";
 
 
 
+class Sidebar extends React.Component{
+    constructor(props){
+        super(props)
 
+        this.handleClose = this.handleClose.bind(this)
+    }
+
+    handleClose(event){
+        event.preventDefault()
+        this.props.onChangeView
+        setTimeout(() => {
+            props.close()
+        },1000)
+    }
+
+    render(){
+        return(
+            <div className ={this.props.sidebar}>
+                <h2>Menu</h2>
+                <div className="lien">
+    
+                    <button onClick={() =>alert('hello')}>Main Menu</button>
+                    <button onClick={null}>Student Sign Up</button>
+                    <button onClick={null}>Mentor Sign Up</button>
+                </div>
+                <button onClick={this.handleClose} id="close">&times; Close</button>
+            </div>
+        )
+    }
+}
+
+
+
+
+/*
 const Sidebar = (props) => {
 
     const[sidebarClass, setSidebarClass] = useState(props.sidebar)
@@ -40,5 +74,6 @@ const Sidebar = (props) => {
         </div>
     )
 }
+*/
 
 export default Sidebar
