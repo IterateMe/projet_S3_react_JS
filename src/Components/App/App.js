@@ -35,7 +35,7 @@ class App extends React.Component{
     if(this.state.currentPage === 'sign-in'){
       componentToRender = <Acceuil cipLogin={this.handleCipChange} onNextPage={this.changePage}/>;
     } else if(this.state.currentPage === 'main-menu'){
-      componentToRender = <MainMenu onNextPage={this.changePage}/>
+      componentToRender = <MainMenu cip={this.state.cip} onNextPage={this.changePage}/>
     } else if(this.state.currentPage === 'mentor-signup'){
       componentToRender = <ChooseCourse onNextPage={this.changePage} cipLogin={this.state.cip} role={1}/>
     } else if(this.state.currentPage === 'student-signup'){
