@@ -7,12 +7,13 @@
     height: 300px;
     padding: 2.27rem 1.16rem;
     background-color: #ffff;
-    /*border: 2px solid #000000;*/
+
     border-style: double;
     border-width: 10px;
-    border-color: dimgray;
+    border-color: black;
     border-radius: 20px;
     margin: 0.1rem;
+
 }
 
 .signUpBox h2 {

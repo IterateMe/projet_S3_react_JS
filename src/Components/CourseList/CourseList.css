@@ -1,11 +1,12 @@
 .CourseList {
     width: 100%;
     padding: 0;
+
   }
 
 .CourseList ul{
   list-style-type: none;
-  align-items: left;
+  /*align-items: left;*/
   justify-content: left;
   padding: 0;
 }

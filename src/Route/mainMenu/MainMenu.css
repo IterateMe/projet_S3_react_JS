@@ -3,13 +3,13 @@
     align-items: center;
     justify-content: center;
     width: 80vw;
-    height: 50vh;
+    height: 40vh;
     padding: 2.27rem 1.16rem;
     background-color: #ffff;
-    /*border: 2px solid #000000;*/
+
     border-style: double;
     border-width: 10px;
-    border-color: dimgray;
+    border-color: black;
     border-radius: 20px;
     margin-top: 2rem;
 }
@@ -34,6 +34,7 @@
     border: 0px;
     color: #ffffff;
     font-weight: 500;
+
 }
 
 .Menu-Button:hover{
