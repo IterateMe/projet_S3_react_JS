@@ -1,8 +1,11 @@
 import React from 'react'
-
+import "./MatchCourse.css"
 class MatchCourse extends React.Component {
+
     constructor(props) {
         super(props);
+
+
     }
 
     render(){
@@ -16,3 +19,5 @@ class MatchCourse extends React.Component {
         )
     }
 }
+
+export default MatchCourse
