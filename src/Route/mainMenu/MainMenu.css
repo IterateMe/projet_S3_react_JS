@@ -1,9 +1,10 @@
 .Main-Menu {
     display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
     width: 80vw;
-    height: 40vh;
+    height: 60vh;
     padding: 2.27rem 1.16rem;
     background-color: #ffff;
 
@@ -24,7 +25,7 @@
 .Menu-Button {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    cursor: wait;
+    cursor: pointer;
     width: 8.11rem;
     padding: .77rem 0;
     border-radius: 54px;
