@@ -1,23 +1,42 @@
 .Main-Menu {
     display: flex;
+    flex-direction: row;
+    position: absolute;
     align-items: center;
     justify-content: center;
-    width: 80vw;
-    height: 40vh;
-    padding: 2.27rem 1.16rem;
+    width: 85vw;
+    height: 65vh;
+    padding: 10px;
     background-color: #ffff;
+    top: 190px;
 
     border-style: double;
     border-width: 10px;
     border-color: black;
     border-radius: 20px;
-    margin-top: 2rem;
+    margin-top: 0;
+}
+
+.Main-Menu > *{
+    padding: 40px;
+
+    height: 60vh;
 }
 
 .buttons{
+    position: relative;
     justify-content: center;
-    padding: 2.27rem 1.16rem;
+    top: 20vh;
+    margin-left: 2vw;
 
+
+}
+.MatchList{
+    /*position: relative;*/
+
+    width: 35vw;
+
+    /*border-right-width: 2rem;*/
 
 }
 
@@ -36,9 +55,9 @@
     color: #ffffff;
     font-weight: 500;
     outline: none;
-
 }
 
 .Menu-Button:hover{
     background-color: #006D00;
 }
+

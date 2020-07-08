@@ -1,13 +1,22 @@
 #toggle{
 
     cursor: pointer;
-    font-size: 60px;
+    font-size: 45px;
     color: black;
-    padding: 0px;
+
     width: 60px;
 
     position:absolute;
-    top: 190px;
-    left: 20px;
+    top: 180px;
+    left: 15px;
+    border-width: 0;
+    outline: none;
+    background-color: transparent;
 
+}
+
+#toggle:hover{
+    background-color: #009E00;
+    border-radius: 15px;
+    outline: black;
 }

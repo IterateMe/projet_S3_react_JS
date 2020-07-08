@@ -2,11 +2,13 @@ import React from 'react';
 import Acceuil from '../../Route/Acceuil/Acceuil';
 import logo from './usherbrooke.png'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
-import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
+import MainMenu from '../../Route/mainMenu/MainMenu.js';
 import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
+//import ParticlesBg from "particles-bg"
 
 import './App.css';
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
+import StudentRatingForm from "../RatingForm/StudentRatingForm";
 
 
 class App extends React.Component{
@@ -42,6 +44,8 @@ class App extends React.Component{
       componentToRender = <ChooseCourse onNextPage={this.changePage} cipLogin={this.state.cip} role={0}/>
     } else if(this.state.currentPage === 'sign-up'){
       componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
+    } else if(this.state.currentPage === 'rating'){
+      componentToRender = <StudentRatingForm/>
     }
 
     let menuDeroulant;
@@ -56,6 +60,7 @@ class App extends React.Component{
         </div>
 
         <div className="App-Main">
+          {/*<ParticlesBg type="cobweb" bg={true}/>*/}
           {componentToRender}
           {menuDeroulant}
         </div>          

@@ -1,12 +1,35 @@
-.CourseList {
-    width: 100%;
-    padding: 0;
+.MatchList {
+    padding:10px;
 
-  }
-
-.CourseList ul{
-  list-style-type: none;
-  /*align-items: left;*/
-  justify-content: left;
-  padding: 0;
 }
+
+.MatchList ul{
+    list-style-type: none;
+    /*align-items: left;
+    justify-content: left;*/
+    padding: 0;
+    overflow-y: scroll;
+    height: 18vh;
+
+}
+/* ----- ScrollBar -----*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* ----- ScrollBar -----*/
+
