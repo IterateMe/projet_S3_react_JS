@@ -21,7 +21,7 @@ class MatchList extends React.Component{
     render(){
         return (
             <div className="MatchList">
-           <h2>Cours que je mentor</h2>
+                <h2>Cours que je mentor</h2>
                 <ul>
                     {
                         this.state.mentoringList.map((course) => {
