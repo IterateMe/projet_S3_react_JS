@@ -4,6 +4,7 @@ import logo from './usherbrooke.png'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
 import MainMenu from '../../Route/mainMenu/MainMenuPage.js';
 import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
+import ParticlesBg from "particles-bg"
 
 import './App.css';
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
@@ -57,6 +58,7 @@ class App extends React.Component{
         </div>
 
         <div className="App-Main">
+          <ParticlesBg type="cobweb" bg={true}/>
           {componentToRender}
           {menuDeroulant}
         </div>          
