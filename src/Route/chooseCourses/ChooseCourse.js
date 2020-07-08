@@ -56,7 +56,6 @@ class ChooseCourse extends React.Component{
 
     handleBack(){
         this.props.onNextPage('main-menu');
-        //goToMainMenu()
     }
 
     search(){
@@ -71,15 +70,6 @@ class ChooseCourse extends React.Component{
     }
 
     confirmCourses(){
-        /*Send a POST request here*/
-        /*SelectedCourses get sent*/
-        /*
-        const dataToSend = {
-            role: this.state.role,
-            selectedCourses: this.state.selectedCourses,
-            cip: this.state.cip
-        }
-        const response = TutoApp.send(dataToSend, this.endPoint);*/
         let dataToSend = []
 
         this.state.selectedCourses.forEach((course) => {
