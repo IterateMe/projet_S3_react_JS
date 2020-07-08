@@ -8,7 +8,7 @@ import ParticlesBg from "particles-bg"
 
 import './App.css';
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
-import Nebula from "../Nebula/Nebula";
+import StudentRatingForm from "../RatingForm/StudentRatingForm";
 
 
 class App extends React.Component{
@@ -44,6 +44,8 @@ class App extends React.Component{
       componentToRender = <ChooseCourse onNextPage={this.changePage} cipLogin={this.state.cip} role={0}/>
     } else if(this.state.currentPage === 'sign-up'){
       componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
+    } else if(this.state.currentPage === 'rating'){
+      componentToRender = <StudentRatingForm/>
     }
 
     let menuDeroulant;

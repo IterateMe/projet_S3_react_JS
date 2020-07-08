@@ -1,15 +1,14 @@
 .Main-Menu {
     display: flex;
+    flex-direction: row;
     position: absolute;
-    /*align-items: center;*/
+    align-items: center;
     justify-content: center;
     width: 85vw;
     height: 65vh;
-    /*padding: 2.27rem 1.16rem;*/
+    padding: 10px;
     background-color: #ffff;
     top: 190px;
-    left: 100px;
-
 
     border-style: double;
     border-width: 10px;
@@ -18,10 +17,26 @@
     margin-top: 0;
 }
 
-.buttons{
-    justify-content: center;
-    padding: 2.27rem 1.16rem;
+.Main-Menu > *{
+    padding: 40px;
 
+    height: 60vh;
+}
+
+.buttons{
+    position: relative;
+    justify-content: center;
+    top: 20vh;
+    margin-left: 2vw;
+
+
+}
+.MatchList{
+    /*position: relative;*/
+
+    width: 35vw;
+
+    /*border-right-width: 2rem;*/
 
 }
 
@@ -40,9 +55,9 @@
     color: #ffffff;
     font-weight: 500;
     outline: none;
-
 }
 
 .Menu-Button:hover{
     background-color: #006D00;
 }
+

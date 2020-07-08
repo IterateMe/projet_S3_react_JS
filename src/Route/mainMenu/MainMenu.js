@@ -30,12 +30,13 @@ class MainMenu extends React.Component{
 
 
             <div className="Main-Menu">
+
+                <MatchList cip={this.props.cip}/>
+                <Calendar id="bob"/>
                 <div className="buttons">
                     <button className="Menu-Button"onClick={this.handleMentorSignUp}>Mentor Sign Up</button><br/>
                     <button className="Menu-Button"onClick={this.handleStudentSignUp}>Student Sign Up</button><br/>
-                    <MatchList cip={this.props.cip}/>
                 </div>
-                <Calendar/>
             </div>
 
 
