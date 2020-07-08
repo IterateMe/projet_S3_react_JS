@@ -1,18 +1,21 @@
 .Main-Menu {
     display: flex;
     position: absolute;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
-    width: 80vw;
-    height: 60vh;
-    padding: 2.27rem 1.16rem;
+    width: 85vw;
+    height: 65vh;
+    /*padding: 2.27rem 1.16rem;*/
     background-color: #ffff;
+    top: 190px;
+    left: 100px;
+
 
     border-style: double;
     border-width: 10px;
     border-color: black;
     border-radius: 20px;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .buttons{
