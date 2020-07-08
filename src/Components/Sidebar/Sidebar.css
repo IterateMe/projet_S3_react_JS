@@ -57,9 +57,10 @@ h2{
 }
 
 #close{
-    position: relative;
-    left: 0.2vw;
-    top: 20vh;
+
+    margin-top: 3rem;
+    bottom: 200px;
+    text-align: center;
 }
 
 button:hover {
