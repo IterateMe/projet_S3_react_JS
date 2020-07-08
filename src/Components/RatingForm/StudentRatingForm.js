@@ -55,7 +55,7 @@ class StudentRatingForm extends React.Component{
                <h5 id="infoText"> Caractère restant: {remainingChars} </h5>
                <textarea id="comment1" maxLength={this.state.maxChars} onChange={this.handleTextAreaChange.bind(this)}/>
                <p/>
-               <button>Soumettre</button>
+               <button id="soumettre">Soumettre</button>
                </div>
        )
    }
