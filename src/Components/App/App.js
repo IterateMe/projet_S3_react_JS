@@ -7,6 +7,7 @@ import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
 
 import './App.css';
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
+import Nebula from "../Nebula/Nebula";
 
 
 class App extends React.Component{
