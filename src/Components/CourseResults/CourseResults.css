@@ -2,9 +2,10 @@
 
 .available {
 
+
   overflow-y: scroll;
   width: 200px;
-  height: 300px;
+  height: 50vh;
   padding: 1rem 1.16rem;
   background-color: #ffff;
 
@@ -37,7 +38,7 @@
   float: right;
   overflow-y: scroll;
   width: 200px;
-  height: 300px;
+  height: 50vh;
   padding: 1rem 1.16rem;
   background-color: #ffff;
   border-style: double;

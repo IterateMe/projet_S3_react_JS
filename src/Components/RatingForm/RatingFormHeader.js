@@ -9,9 +9,9 @@ class RatingFormHeader extends React.Component{
     render() {
         return(
             <div>
-                <h2>Notation de {this.props.subject}</h2>
+                <h2>Evaluation of {this.props.subject}</h2>
                 <h4>{this.props.description}</h4>
-                <h3>Veuillez attribuer un note pour les différents critères: </h3>
+                <h3>Please give a mark for each criteria: </h3>
             </div>
         )
     }

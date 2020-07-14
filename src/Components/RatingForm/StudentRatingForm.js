@@ -11,15 +11,15 @@ class StudentRatingForm extends React.Component{
        this.fields = [
            {
                id: "rating1",
-               label: "L'étudiant démontre une volontée d'apprendre"
+               label: "The student demonstrates a will to learn"
            },
            {
                id: "rating2",
-               label: "L'étudiant est ponctuel"
+               label: "The student arrives on time"
            },
            {
                id: "rating3",
-               label: "Je serais prêt à ravoir cet étudiant"
+               label: "I would like to teach this student again"
            }
        ]
 
@@ -51,11 +51,11 @@ class StudentRatingForm extends React.Component{
            <div id="customDiv" className={form}>
                <RatingFormHeader subject="BOUBOUL" description="Le sk8ter boi"/>
                {fields}
-               <h4>Commentaires:</h4>
-               <h5 id="infoText"> Caractère restant: {remainingChars} </h5>
+               <h4>Comments:</h4>
+               <h5 id="infoText"> Characters left: {remainingChars} </h5>
                <textarea id="comment1" maxLength={this.state.maxChars} onChange={this.handleTextAreaChange.bind(this)}/>
                <p/>
-               <button>Soumettre</button>
+               <button id="soumettre">Submit</button>
                </div>
        )
    }

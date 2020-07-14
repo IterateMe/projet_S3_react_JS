@@ -16,6 +16,7 @@ class SignUpPage extends React.Component{
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleConfirmedPasswordChange = this.handleConfirmedPasswordChange.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
+    this.handleBackButton = this.handleBackButton.bind(this);
   }
 
   handleUsernameChange(newUsername){
@@ -32,7 +33,6 @@ class SignUpPage extends React.Component{
 
   handleSignUp(){
     if (this.state.password === this.state.confirmedPassword){
-      this.props.cipLogin(this.state.username);
       console.log(this.state.username);
       console.log(this.state.password);
       console.log(this.state.confirmedPassword);
@@ -41,8 +41,12 @@ class SignUpPage extends React.Component{
         email: this.state.username + "@usherbrooke.ca",
         password: this.state.password
       }
-      let response = TutoApp.send(dataToSend, "/tutoratApp/api/users");
-      console.log(response)
+      TutoApp.send(dataToSend, "/tutoratApp/api/users").then(response => {
+        if (response){
+          this.props.onNextPage('main-menu');
+          this.props.cipLogin(this.state.username);
+        }
+      })
     } else {
       console.log('Invalid Credentials.');
     }  

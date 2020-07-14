@@ -62,10 +62,17 @@ class ChooseCourse extends React.Component{
         let coursesToAdd = [];
         if(!this.state.searchTerm || !this.state.cip){
             alert('Did you select a search semester or did you sign in?');
+        } else if(this.state.searchTerm.length != 3){
+            alert('Invalid semester format');
         } else {
            coursesToAdd = Zeus.search(this.state.searchTerm,this.state.cip)
                 .then(results => Zeus.getStudiedCourses(this.state.cip, results))
-                .then(results => this.setState({availableCourses: results}));
+                .then(results => this.setState({availableCourses: results}))
+                .then(()=>{
+                    if (this.state.availableCourses.length == 0){
+                        alert('No courses found');
+                    }
+                })
         }
     }
 
@@ -80,8 +87,13 @@ class ChooseCourse extends React.Component{
                 cours_id: course.name
             })
         })
-        const response = TutoApp.send(dataToSend, '/tutoratApp/api/users/inscription');
-        console.log(response)
+        TutoApp.send(dataToSend, '/tutoratApp/api/users/inscription').then(response => {
+            if (response){
+                this.handleBack()
+            } else {
+                alert('An error occured');
+            }
+        })
     }
 
     handleSemesterChange(semester){

@@ -4,7 +4,7 @@ import logo from './usherbrooke.png'
 import SignUpPage from '../../Route/SignUpPage/SignUpPage';
 import MainMenu from '../../Route/mainMenu/MainMenu.js';
 import ChooseCourse from '../../Route/chooseCourses/ChooseCourse';
-//import ParticlesBg from "particles-bg"
+import ParticlesBg from "particles-bg"
 
 import './App.css';
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
@@ -41,7 +41,7 @@ class App extends React.Component{
   render(){
     let componentToRender;
     if(this.state.currentPage === 'sign-in'){
-      componentToRender = <Acceuil cipLogin={this.handleCipChange} onNextPage={this.changePage} userSignedIn={this.handleSignIn}/>;
+      componentToRender = <Acceuil cipLogin={this.handleCipChange} onNextPage={this.changePage} /*userSignedIn={this.handleSignIn}*//>;
     } else if(this.state.currentPage === 'main-menu'){
       componentToRender = <MainMenu cip={this.state.cip} onNextPage={this.changePage}/>
     } else if(this.state.currentPage === 'mentor-signup'){
@@ -49,7 +49,7 @@ class App extends React.Component{
     } else if(this.state.currentPage === 'student-signup'){
       componentToRender = <ChooseCourse onNextPage={this.changePage} cipLogin={this.state.cip} role={0}/>
     } else if(this.state.currentPage === 'sign-up'){
-      componentToRender = <SignUpPage cipLogin={this.handleCipChange} userSignedIn={this.handleSignIn}/>
+      componentToRender = <SignUpPage cipLogin={this.handleCipChange} userSignedIn={this.handleSignIn} onNextPage={this.changePage}/>
     } else if(this.state.currentPage === 'rating'){
       componentToRender = <StudentRatingForm/>
     }
@@ -66,7 +66,7 @@ class App extends React.Component{
         </div>
 
         <div className="App-Main">
-          {/*<ParticlesBg type="cobweb" bg={true}/>*/}
+          <ParticlesBg type="cobweb" bg={true} color="#1A9495"/>
           {componentToRender}
           {menuDeroulant}
         </div>          

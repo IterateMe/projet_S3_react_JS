@@ -28,11 +28,13 @@ const TutoApp = {
                 if(response.ok) {
                     alert("Success")
                 }
+                else {
+                    alert('Une erreur est survenue')
+                    return null;
+                }
             })
             .then(jsonResponse => {
-                console.log(jsonResponse);
-                // let message =  `Added\nid: ${jsonResponse.id} \ntitle: ${jsonResponse.title} \nbody: ${jsonResponse.body}`;
-                // alert(message);
+                return true;
             })
             .catch(erreur => {
                 alert(erreur)
