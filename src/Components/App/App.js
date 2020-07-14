@@ -16,11 +16,13 @@ class App extends React.Component{
     super(props);
     this.state = {
         currentPage: 'sign-in',
-        cip: ""
+        cip: "",
+        firstnameLoggedIn: ""
     };
 
     this.handleCipChange = this.handleCipChange.bind(this);
     this.changePage = this.changePage.bind(this);
+    this.handleSignIn = this.handleSignIn.bind(this);
   }
   
   handleCipChange(newCip){
@@ -32,10 +34,14 @@ class App extends React.Component{
     this.setState({currentPage: newPage});
   }
 
+  handleSignIn(newFirstname){
+    this.setState({firstnameLoggedIn: newFirstname});
+  }
+
   render(){
     let componentToRender;
     if(this.state.currentPage === 'sign-in'){
-      componentToRender = <Acceuil cipLogin={this.handleCipChange} onNextPage={this.changePage}/>;
+      componentToRender = <Acceuil cipLogin={this.handleCipChange} onNextPage={this.changePage} userSignedIn={this.handleSignIn}/>;
     } else if(this.state.currentPage === 'main-menu'){
       componentToRender = <MainMenu cip={this.state.cip} onNextPage={this.changePage}/>
     } else if(this.state.currentPage === 'mentor-signup'){
@@ -43,7 +49,7 @@ class App extends React.Component{
     } else if(this.state.currentPage === 'student-signup'){
       componentToRender = <ChooseCourse onNextPage={this.changePage} cipLogin={this.state.cip} role={0}/>
     } else if(this.state.currentPage === 'sign-up'){
-      componentToRender = <SignUpPage cipLogin={this.handleCipChange}/>
+      componentToRender = <SignUpPage cipLogin={this.handleCipChange} userSignedIn={this.handleSignIn}/>
     } else if(this.state.currentPage === 'rating'){
       componentToRender = <StudentRatingForm/>
     }

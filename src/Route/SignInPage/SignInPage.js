@@ -9,7 +9,8 @@ class SignInPage extends React.Component{
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            firstname: '',
         }
 
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
@@ -31,7 +32,9 @@ class SignInPage extends React.Component{
             .then((response) => {
                 console.log(response);
                 if(response){
+                    this.setState({firstname: response.prenom})
                     this.props.cipLogin(this.state.username);
+                    this.props.userSignedIn(this.state.firstname);
                 } else {
                     alert('Please Sign up!');
                 }

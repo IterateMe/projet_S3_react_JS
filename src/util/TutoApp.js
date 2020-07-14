@@ -10,7 +10,7 @@ const TutoApp = {
             .then(jsonResponse => {
                 if(jsonResponse.length > 0){
                     console.log(jsonResponse);
-                    return true;
+                    return jsonResponse;
                 }
                 console.log('No entry found');
                 return false;
