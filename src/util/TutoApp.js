@@ -52,6 +52,7 @@ const TutoApp = {
                 if(!jsonResponse){
                     return []
                 } else {
+                    console.log('Getting courses as Mentor');
                     let courseArray = jsonResponse.map(course => {
                         return {
                             id: course.cours_id,
@@ -76,6 +77,7 @@ const TutoApp = {
                 if(!jsonResponse){
                     return []
                 } else {
+                    console.log('Getting courses as Student');
                     let courseArray = jsonResponse.map(course => {
                         return {
                             id: course.cours_id,
@@ -85,6 +87,24 @@ const TutoApp = {
                         }
                     })
                     return courseArray
+            }
+        })
+    },
+
+    createMatches(){
+        return fetch('http://localhost:8080/tutoratApp/api/jumelages/makeJumelages')
+        .then(response => {
+            if (response){
+                console.log(response);
+            }
+        })
+    },
+
+    resetMatches(){
+        return fetch(`http://localhost:8080/tutoratApp/api/jumelages/resetJumelages`)
+        .then(response => {
+            if(response === "OK"){
+                console.log(response);
             }
         })
     }

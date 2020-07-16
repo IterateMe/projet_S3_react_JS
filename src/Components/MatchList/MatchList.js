@@ -41,20 +41,44 @@ class MatchList extends React.Component{
         super(props);
         this.state = {
             mentoringList : [],
-            mentoredList : testCourses
+            mentoredList : []
         }
-        //TutoApp.getCourseAsStudent(this.props.cip).then(result => this.setState({
-        //     mentoredList: result
-        //}))
 
-     TutoApp.getCourseAsMentorConfirmed(this.props.cip).then(result => this.setState({
-         mentoringList: result
-     }))
+        this.match = this.match.bind(this)
+        this.getMatchedCourses = this.getMatchedCourses.bind(this);
+        this.reset = this.reset.bind(this);
+        this.getMatchedCourses();
+    }
+
+    match(){
+        console.log('Matching....');
+        TutoApp.createMatches().then(() => this.getMatchedCourses());
+    }
+
+    reset(){
+        console.log('Resetting....');
+        TutoApp.resetMatches();
+        this.setState({
+            mentoringList : [],
+            mentoredList : []
+        })
+    }
+
+    getMatchedCourses(){
+        TutoApp.getCourseAsStudent(this.props.cip).then(result => this.setState({
+            mentoredList: result
+       }))
+
+       TutoApp.getCourseAsMentorConfirmed(this.props.cip).then(result => this.setState({
+           mentoringList: result
+       }))
     }
 
     render(){
         return (
             <div className="MatchList">
+                <button onClick={this.match}>Match Test</button>
+                <button onClick={this.reset}>Reset Matches</button>
                 <h2>Courses as a Mentor</h2>
                 <ul>
                     {
