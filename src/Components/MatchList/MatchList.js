@@ -77,8 +77,8 @@ class MatchList extends React.Component{
     render(){
         return (
             <div className="MatchList">
-                <button onClick={this.match}>Match Test</button>
-                <button onClick={this.reset}>Reset Matches</button>
+                <button className="testButton" onClick={this.match}>Match Test</button>
+                <button className="testButton" onClick={this.reset}>Reset Matches</button>
                 <h2>Courses as a Mentor</h2>
                 <ul>
                     {
