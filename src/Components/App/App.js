@@ -53,7 +53,7 @@ class App extends React.Component{
     } else if(this.state.currentPage === 'rating'){
       componentToRender = <StudentRatingForm/>
     }
-
+    //componentToRender = <StudentRatingForm/>
     let menuDeroulant;
     if(this.state.currentPage !== 'sign-in'){
       menuDeroulant = <SidebarLayout onNextPage={this.changePage}/>

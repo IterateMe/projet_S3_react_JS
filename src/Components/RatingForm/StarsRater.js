@@ -4,6 +4,7 @@ class StarsRater extends React.Component {
 
     constructor(props) {
         super(props);
+        this.titles = ["Pas du tout d’accord", "Pas d’accord", "Neutre", "D’accord","Tout à fait d’accord"]
         this.state = {
             currentRating: 1,
             maxRating: 5,
@@ -42,6 +43,7 @@ class StarsRater extends React.Component {
                      onClick={this.starClicked.bind(this)}
                      onMouseEnter={this.onMouseEnter.bind(this)}
                      onMouseLeave={this.onMouseLeave.bind(this)}
+                     title={this.titles[i-1]}
                      src={
                          i <= this.state.currentRating ? this.star : this.emptyStar
                      }
